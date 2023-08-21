@@ -1,0 +1,33 @@
+'''
+question:
+
+3.)Write a program to create "BCA.txt" file which contain information about BCA course. 
+count and print the total number of lines starting with ‘A’, ‘B’, and ‘C’ in "intro.txt" file.
+'''
+filename="c://sqlite3//BCA.txt"
+with open(filename,"w",newline="")as write_file:
+    heading=['\t\tDetils About BCA Course']
+    write_file.writelines(heading)
+    print('One line added successful')
+    content=['BCA is computer science Course.\n',
+             'It is stand for Bachelor of computer application\n',
+             'In this course,we learn about programming languages and related to computer knoweldge\n',
+             'BCA is 3 years of course,we can also clear BCA honur with 4 year.',
+             'After BCA Many we can work in many companies work as a software developer,application developer,web designer and lots of jobs.'
+            ]
+    write_file.writelines(content)
+    print('content added successfull')
+
+with open(filename,"r")as read_file:
+    data=read_file.read()
+    print(data)
+
+with open(filename,"r")as read_file:
+    data=read_file.read()
+    count=0
+    for i in range(len(data)):
+        if data[i][0]==str('B'):
+            count+=1
+    print('Total  in text file is:',count)
+    #it is print how many lines are available in the text file
+    
