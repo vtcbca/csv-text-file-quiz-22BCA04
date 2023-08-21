@@ -12,7 +12,9 @@ with open(filename,"w",newline="")as write_file:
     content=['BCA is computer science Course.\n',
              'It is stand for Bachelor of computer application\n',
              'In this course,we learn about programming languages and related to computer knoweldge\n',
-             'BCA is 3 years of course,we can also clear BCA honur with 4 year.']
+             'BCA is 3 years of course,we can also clear BCA honur with 4 year.',
+             'After BCA Many we can work in many companies work as a software developer,application developer,web designer and lots of jobs.'
+            ]
     write_file.writelines(content)
     print('content added successfull')
 
